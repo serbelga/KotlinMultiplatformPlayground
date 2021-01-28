@@ -1,0 +1,21 @@
+CREATE TABLE Song (
+    title TEXT NOT NULL
+);
+
+INSERT INTO Song VALUES ('Gimme Shelter');
+INSERT INTO Song VALUES ('Could You Be Loved');
+INSERT INTO Song VALUES ('Respect');
+INSERT INTO Song VALUES ('Stairway to Heaven');
+
+selectAll:
+SELECT *
+FROM Song;
+
+selectByTitle:
+SELECT *
+FROM Song
+WHERE title = ?;
+
+insert:
+INSERT INTO Song(title)
+VALUES (?);
