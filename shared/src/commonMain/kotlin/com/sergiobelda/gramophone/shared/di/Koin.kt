@@ -9,3 +9,5 @@ fun initKoin(appDeclaration: KoinAppDeclaration = {}) = startKoin {
     modules(repositoryModule)
     modules(useCaseModule)
 }
+
+fun initKoin() = initKoin {}
