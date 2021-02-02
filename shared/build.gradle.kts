@@ -5,6 +5,7 @@ plugins {
     id("com.android.library")
     id("com.squareup.sqldelight")
 }
+
 group = "com.sergiobelda.gramophone"
 version = "1.0-SNAPSHOT"
 
@@ -29,6 +30,7 @@ android {
 
 kotlin {
     android()
+    jvm()
     ios {
         binaries {
             framework {
@@ -72,6 +74,11 @@ kotlin {
             }
         }
         val iosTest by getting
+        val jvmMain by getting {
+            dependencies {
+                implementation(Dependencies.SqlDelight.sqliteDriver)
+            }
+        }
     }
 }
 android {

@@ -1,5 +1,7 @@
 package com.sergiobelda.gramophone.shared.di
 
+import com.sergiobelda.gramophone.shared.dao.ArtistDao
+import com.sergiobelda.gramophone.shared.dao.IArtistDao
 import com.sergiobelda.gramophone.shared.dao.ISongsDao
 import com.sergiobelda.gramophone.shared.dao.SongsDao
 import com.sergiobelda.gramophone.shared.db.DriverFactory
@@ -12,5 +14,8 @@ val databaseModule = module {
     }
     single<ISongsDao> {
         SongsDao()
+    }
+    single<IArtistDao> {
+        ArtistDao()
     }
 }

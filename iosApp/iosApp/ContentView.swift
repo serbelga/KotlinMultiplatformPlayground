@@ -1,10 +1,6 @@
 import SwiftUI
 import shared
 
-func greet() -> String {
-    return Greeting().greeting()
-}
-
 struct ContentView: View {
     var mainViewModel = MainViewModel(songsRepository: SongsRepository(songsDao: SongsDao()))
     

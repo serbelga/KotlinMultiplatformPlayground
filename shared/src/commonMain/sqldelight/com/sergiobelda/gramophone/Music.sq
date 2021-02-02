@@ -1,0 +1,53 @@
+CREATE TABLE DbSong (
+    id INTEGER PRIMARY KEY,
+    title TEXT NOT NULL
+);
+
+CREATE TABLE DbArtist (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL
+);
+
+CREATE TABLE DbAlbum (
+    id INTEGER PRIMARY KEY,
+    title TEXT NOT NULL,
+    release_year INTEGER NOT NULL,
+    artist_id INTEGER NOT NULL,
+    FOREIGN KEY(artist_id) REFERENCES DbArtist(id)
+);
+
+INSERT INTO DbSong VALUES (1, 'Gimme Shelter');
+INSERT INTO DbSong VALUES (2, 'Could You Be Loved');
+INSERT INTO DbSong VALUES (3, 'Respect');
+INSERT INTO DbSong VALUES (4, 'Stairway to Heaven');
+
+INSERT INTO DbArtist VALUES (1, 'Pink Floyd');
+
+INSERT INTO DbAlbum VALUES (1, 'Wish You Were Here', 1975, 1);
+
+selectAllSongs:
+SELECT *
+FROM DbSong;
+
+selectSongById:
+SELECT *
+FROM DbSong
+WHERE id = ?;
+
+selectAllArtists:
+SELECT *
+FROM DbArtist;
+
+selectArtistById:
+SELECT *
+FROM DbArtist
+WHERE id = ?;
+
+selectAllAlbums:
+SELECT *
+FROM DbAlbum;
+
+selectAlbumById:
+SELECT *
+FROM DbAlbum
+WHERE id = ?;

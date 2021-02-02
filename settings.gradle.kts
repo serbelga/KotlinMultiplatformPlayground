@@ -4,18 +4,11 @@ pluginManagement {
         google()
         jcenter()
         mavenCentral()
-    }
-    resolutionStrategy {
-        eachPlugin {
-            if (requested.id.namespace == "com.android" || requested.id.name == "kotlin-android-extensions") {
-                useModule("com.android.tools.build:gradle:4.0.1")
-            }
-        }
+        maven(url = "https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
 rootProject.name = "Gramophone"
 
-
 include(":androidApp")
 include(":shared")
-
+include(":desktop")
