@@ -1,9 +1,9 @@
 object Versions {
     const val appCompat = "1.2.0"
-    const val compose = "1.0.0-alpha10"
+    const val compose = "1.0.0-alpha11"
     const val constraintLayout = "2.0.4"
     const val koin = "3.0.0-alpha-4"
-    const val kotlin = "1.4.21"
+    const val kotlin = "1.4.21-2"
     const val sqlDelight = "1.4.4"
     const val materialComponentsAndroid = "1.2.1"
 }

@@ -5,8 +5,9 @@ import androidx.compose.material.Button
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
+import androidx.compose.ui.unit.IntSize
 
-fun main() = Window {
+fun main() = Window(title = "", size = IntSize(300, 300)) {
     Scaffold(
         topBar = {
             TopAppBar(title = {
