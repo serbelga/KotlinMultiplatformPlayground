@@ -12,6 +12,7 @@ CREATE TABLE DbAlbum (
     id INTEGER PRIMARY KEY,
     title TEXT NOT NULL,
     release_year INTEGER NOT NULL,
+    cover TEXT NOT NULL,
     artist_id INTEGER NOT NULL,
     FOREIGN KEY(artist_id) REFERENCES DbArtist(id)
 );
@@ -23,7 +24,7 @@ INSERT INTO DbSong VALUES (4, 'Stairway to Heaven');
 
 INSERT INTO DbArtist VALUES (1, 'Pink Floyd');
 
-INSERT INTO DbAlbum VALUES (1, 'Wish You Were Here', 1975, 1);
+INSERT INTO DbAlbum VALUES (1, 'Wish You Were Here', 1975, "https://images.genius.com/013b18b28cb2836b2638d1bce504bff2.1000x1000x1.png", 1);
 
 selectAllSongs:
 SELECT *

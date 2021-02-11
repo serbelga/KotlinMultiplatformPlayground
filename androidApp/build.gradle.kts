@@ -24,6 +24,7 @@ dependencies {
     implementation(Dependencies.Koin.androidScope)
     implementation(Dependencies.Koin.androidViewModel)
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.0-rc01")
+    implementation("dev.chrisbanes.accompanist:accompanist-glide:0.5.0")
 }
 android {
     compileSdkVersion(30)

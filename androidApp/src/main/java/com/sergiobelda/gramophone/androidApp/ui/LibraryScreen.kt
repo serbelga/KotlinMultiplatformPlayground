@@ -21,6 +21,6 @@ fun LibraryScreen(mainViewModel: MainViewModel) {
                 )
             }
         }
-        ArtistsScreen(mainViewModel)
+        AlbumsScreen(mainViewModel)
     }
 }

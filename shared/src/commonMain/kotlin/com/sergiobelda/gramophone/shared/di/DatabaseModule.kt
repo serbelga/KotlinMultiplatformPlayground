@@ -1,9 +1,6 @@
 package com.sergiobelda.gramophone.shared.di
 
-import com.sergiobelda.gramophone.shared.dao.ArtistDao
-import com.sergiobelda.gramophone.shared.dao.IArtistDao
-import com.sergiobelda.gramophone.shared.dao.ISongsDao
-import com.sergiobelda.gramophone.shared.dao.SongsDao
+import com.sergiobelda.gramophone.shared.dao.*
 import com.sergiobelda.gramophone.shared.db.DriverFactory
 import com.sergiobelda.gramophone.shared.db.createDatabase
 import org.koin.dsl.module
@@ -17,5 +14,8 @@ val databaseModule = module {
     }
     single<IArtistDao> {
         ArtistDao()
+    }
+    single<IAlbumDao> {
+        AlbumDao()
     }
 }
